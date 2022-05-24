@@ -1,0 +1,23 @@
+# Site
+name: "Telmo Julião"
+title: "Telmo Julião"
+description: "Hi, my name is Telmo Julião. I'm a digital Product Designer based in sunny Lisbon, Portugal."
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/logo.png'
+include: ["_pages"]
+permalink: /:title/
+email: hi@telmojuliao.com
+# baseurl: /portfolio-jekyll
+
+# Permalink
+collections:
+  posts:
+    output: true
+    permalink: /work/:name
+
+# Sass
+sass:
+  sass_dir: _sass
+  style: compressed
+
+exclude: [Gemfile, Gemfile.lock]
