@@ -9,7 +9,7 @@ permalink: /work/
 </div>
 
 <div class="works-grid-container">
-    {% for post in site.posts %}
+    {% for post in site.works %}
         {% include postbox.html %}
     {% endfor %}
 </div>
