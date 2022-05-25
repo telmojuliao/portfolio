@@ -2,14 +2,13 @@
 name: "Telmo Julião"
 title: "Telmo Julião"
 description: "Hi, my name is Telmo Julião. I'm a digital Product Designer based in sunny Lisbon, Portugal."
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/logo.png'
+logo: "assets/images/logo.png"
+favicon: "assets/images/logo.png"
 include: ["_pages"]
 permalink: /:title/
 email: hi@telmojuliao.com
-# baseurl: /portfolio-jekyll
 
-# Permalink
+# Works collection
 collections:
   works:
     output: true

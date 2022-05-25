@@ -6,68 +6,58 @@
 <meta name="author" content="Telmo E. Julião">
 <meta name="description" content="This is my resume / curriculum vitae, with all my info, education, professional skills and experience.">
 <meta name="keywords" content="Telmo Julião, biography, resumé, curriculum vitae, cv, portfolio, product designer, ux designer, ui designer, front-end developer">
-
 <link rel="icon" href="{{ site.baseurl }}/assets/images/logo.png">
-
-<title>{{site.name}} | {{ page.title }}</title>
-    
 <link href="{{ site.baseurl }}/assets/css/theme.css" rel="stylesheet">
-<!-- <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script> --> <!-- JQuery -->
-<script src="https://kit.fontawesome.com/382964958c.js" crossorigin="anonymous"></script> <!-- Icons do Fontawesome -->
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet"> <!-- DM Sans do GFonts -->
+<script src="https://kit.fontawesome.com/382964958c.js" crossorigin="anonymous"></script> <!-- Icons do Fontawesome -->
+<title>{{site.name}} | {{ page.title }}</title>
 </head>
 
 <body>
-
-<!-- Navegação -->
+<!-- NAVEGAÇÃO -->
 <nav class="navbar">
-    <input type="checkbox" id="toggle" autocomplete="off" name="Menu Toggle" value="Open">
-    <label for="toggle"><i class="fa-solid fa-bars menu-open"></i></label>
-    <div class="menu">
-        <ul class="menu-links">
-            {% for item in site.data.menu %}
-            <li><a href="{{ item.link }}">{{ item.title }}</a></li>
-            {% endfor %}
-        </ul>
+    <div class="container">
+        <input type="checkbox" id="toggle" autocomplete="off" name="Menu toggle" aria-label="Open menu" value="Open">
+        <label for="toggle"><i class="fa-solid fa-bars menu-open"></i></label>
+        <div class="menu">
+            <ul class="menu-links">
+                {% for item in site.data.menu %}
+                <li><a href="{{ item.link }}">{{ item.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 </nav>
 
-
-<!-- Main -->
-<div class="site-content {% if page.url == '/' %} firstpage {% endif %}">
-
+<!-- MAIN -->
+<main class="{% if page.title == 'Home' %}firstpage{% endif %}">
     <div class="container">
-
-        <!-- Logo -->
         <a class="tj-logo" href="{{ site.baseurl }}/">
             <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">
-        </a>  
-
-        <!-- Content -->
+        </a> 
+        <h1 class="page-title{% if page.title == 'Home' %} home-title{% endif %}">{{ page.title }}</h1>
         <div class="main-content">
             {{ content }}
         </div>
-
     </div>
+</main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-12 text-center text-lg-left">
-                    Copyright © {{ site.time | date: "%Y" }} {{ site.name }} 
-                </div>
-                <div class="col-md-6 col-sm-12 text-center text-lg-right">    
-                    <!-- links para social media? -->
-                    <button id="scrollToTopBtn">☝️</button>
-                </div>
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md text-left">
+                Copyright © {{ site.time | date: "%Y" }} {{ site.name }} 
+            </div>
+            <div class="col-md text-right">    
+                <button id="scrollToTopBtn" name="Scroll to top" aria-label="Scroll to top">☝️</button>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <script src="{{ site.baseurl }}/assets/js/stuff.js"></script> 
-
-</div> 
+<!-- OUTROS SCRIPTS -->
+<script src="{{ site.baseurl }}/assets/js/stuff.js"></script> 
 
 </body>
 </html>

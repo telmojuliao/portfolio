@@ -3,18 +3,16 @@ layout: default
 title: Home
 ---
 
-<h1>{{ page.title }}</h1>
 <p class="sitetag">
     {{ site.description }}
 </p>
 
 <h2>Latest works</h2>
+
 <div class="works-grid-container">
     {% for post in site.works limit: 3 %}
         {% include postbox.html %}
     {% endfor %}
 </div>
-<a href="#">&rightarrow; View all</a>
 
-
-
+<a href="/work/">&rightarrow; View all</a>

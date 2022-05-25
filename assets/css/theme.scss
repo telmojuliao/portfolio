@@ -1,104 +1,81 @@
 ---
 
 ---
+// RESETS
 * {
     box-sizing: border-box;
- }
- 
- html {
-    scroll-behavior: smooth;
- }
+    // border: 1px solid red;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+
+ // CORES
 $blue: #40ffdc;
-$purple: #7463f4;
+$purple: #6c16f8;
 $black: #17262a;
 $grey: #e9ecef;
 $white: #fff;
-$primary: $blue;
+$primary: $purple;
 $dark:    $black;
 
+
+// IMPORTAR BOOTSTRAP
+@import 'bootstrap/bootstrap';
 @import "bootstrap/functions";
 @import 'bootstrap/variables';
 @import "bootstrap/mixins";
-@import 'bootstrap/bootstrap';
 
 
-// general
-body, input, button, select, optgroup, textarea {   
+// MAIN ELEMENTS
+body,
+input,
+button {   
     font-family: DM Sans;
 }
+
 body {
-    line-height:1.7;
+    line-height: 1.7;
     background: #f4f4f4;
 }
+
 a {
-    color: darken($primary, 24%);
+    color: lighten($primary, 10%);
 }
+
 img {
-    max-width:100%;
-    height:auto;
+    max-width: 100%;
+    height: auto;
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-weight:700;
+    font-weight: 700;
 }
 
-.tj-logo img {
-    max-height:80px;
-    margin-bottom:40px;
-    margin-top:40px;
-}
 
-.site-content {
-    padding-top:50px;
-}
-.sitetag {
-    font-weight:400;    
-    line-height:1.3;
-    font-size:2.25rem;
-    padding-bottom: 3rem;
-    @include media-breakpoint-up(sm) {
-        font-size:3rem;
-        line-height:1.2;
-    }
-}
-.bigradius {
-    border-radius: 40px;
-}
-.mb-neg-30 {
-    margin-bottom:-30px;
-}
-.btn {
-    min-width: 180px;
-}
-blockquote {
-    font-family: Times New Roman;
-    font-style: italic;
-    font-size: 20px;
-    position:relative;
-    border-left:1px solid $dark;
-    margin-left:30px;
-    padding-left:15px;
-    cite {
-        font-weight:700;
-    }
-}
-
+// NAVEGAÇÃO
 .navbar {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
     background-color: $white;
-    padding: 16px;
     a {
         text-decoration: none;
+    }
+    input {
+        appearance: none;
+        &:checked ~ .menu {
+            max-height: 100%;
+        }
     }
     label {
         display: inline-flex;
         align-items: center;
         cursor: pointer;
-        padding: 20px;
+        padding: 16px 0;
+        margin: 0;
+    }
+    .container {
+        padding-right: 0;
     }
 }
 
@@ -116,46 +93,54 @@ blockquote {
     }
 }
 
-#toggle {
-    appearance: none;
+
+// MAIN ELEMENTS
+.tj-logo {
+    display: inline-block;
+    padding: 40px 0;
+    img {
+        height: 80px;
+    }
 }
 
-#toggle:checked ~ .menu {
-    max-height: 100%;
+.sitetag {
+    font-size: 2.25rem;
+    line-height: 1.3;
+    font-weight: 400;   
+    padding-bottom: 3rem;
+}
+
+.btn {
+    min-width: 180px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.home-title {
+    display: none;
 }
 
 
-#scrollToTopBtn {
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    background-color: $white;
-  }
+//FOOTER
+.footer {
+    margin-top:120px;
+    padding:30px;
+    border-top:1px solid $grey;
+    font-size:15px;
+    background: $white;
+    button {
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        background-color: $white;
+    }
+}
 
-// animation
-body, 
-a, 
-a:hover,
-.site-content,
-.title, .title:hover,
-.card, .card:hover,
-img, img:hover {
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -ms-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-}
-@keyframes fade-down {
-	0% {
-		opacity: 0;
-		transform: translateY(-100%);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0%);
-	}
-}
+
+// ANIMAÇÕES GERAIS
 @keyframes fade-up {
 	0% {
 		opacity: 0;
@@ -166,67 +151,27 @@ img, img:hover {
 		transform: translateY(0%);
 	}
 }
-.firstpage .works-grid-item:nth-child(1), .firstpage .works-grid-item:nth-child(2), .firstpage .works-grid-item:nth-child(3) {
-    animation: fade-up 0.7s ease-out forwards running;
+
+.article-post,
+.works-grid-item,
+.entry-featured-image {
+    animation: fade-up .8s ease-out;
 }
 
 
+// GRID PARA WORKS
 
-// works
-
-// home container dos postbox em grid
+// Container Geral
 .works-grid-container {
     width: auto;
-    margin: 50px auto;
+    margin: 32px auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-gap: 30px;
+    grid-gap: 32px;
 }
 
-// single card em flex
-.works-grid-item {  
-    color: #333;
-    padding: 0;
-    display: flex;
-    align-items:center;
-    .card {
-        border:0;
-        &:hover {           
-           .card-title a { 
-                background-size: 100% 100%;
-            }
-        }
-    }
-    .card-title {
-        font-weight:700;
-        font-size:22px;
-        line-height:1.4;
-        a { 
-            background-image: linear-gradient(180deg, transparent 89%, $primary 0);
-            background-repeat: no-repeat;
-            background-size: 0 100%;
-            transition: background-size .6s ease;
-            position:relative;
-            &:hover {
-                text-decoration:none;
-            }
-        }
-    }
-    .card-text {
-        font-weight:400;
-        font-size:16px;
-        line-height:1.8;
-        margin-top:15px;
-    }
-
-    .img-thumb {
-        object-fit:cover;
-        height:240px;
-        width:100%;
-        object-position:top;
-    }
-}
+// Layout para Homepage
 .firstpage {
     .works-grid-item:nth-child(1) {
         grid-column-start: 1;
@@ -234,11 +179,10 @@ img, img:hover {
         grid-row-start: 1;
         grid-row-end: 3;
         flex-direction: column;  
-        align-items: flex-start;
-        font-size: 1em;
+        font-size: 1rem;
         padding:0;
         .card-title {
-            font-size:28px;
+            font-size:1.75rem;
         }
         .img-thumb {
             object-fit:cover;
@@ -266,20 +210,60 @@ img, img:hover {
 }
 
 
+// Single work (Cards do Bootstrap)
+.works-grid-item {  
+    color: #333;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    .card {
+        border:0;
+        &:hover {           
+           .card-title a { 
+                background-size: 100% 100%;
+            }
+        }
+    }
+    .card-title {
+        font-weight:700;
+        font-size:22px;
+        line-height:1.4;
+        a { 
+            background-image: linear-gradient(180deg, transparent 89%, $primary 0);
+            background-repeat: no-repeat;
+            background-size: 0 100%;
+            transition: background-size .8s ease;
+            position:relative;
+            &:hover {
+                text-decoration:none;
+            }
+        }
+    }
+    .card-text {
+        font-weight:400;
+        font-size:16px;
+        line-height:1.8;
+        margin-top:15px;
+    }
+
+    .img-thumb {
+        object-fit:cover;
+        height:240px;
+        width:100%;
+        object-position:top;
+    }
+}
+
+
 // portfolio work 
 .article-post, .entry-header {
-    max-width: 740px;
-    padding-left: 20px;
-    padding-right: 20px;
+    // padding-left: 20px;
+    // padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
 }
-.post-title {
-    font-size:3rem;
-    font-weight:700;
-    line-height:1.2;
-    text-align: center;
-}
+
+
 .entry-featured-image {  
     width:940px;  
     max-width: 100%;
@@ -291,7 +275,7 @@ img, img:hover {
 }
 
 .article-post {    
-    font-size:18px;
+    font-size:1rem;
     p {
         margin-top:30px;
         margin-bottom:30px;
@@ -299,40 +283,68 @@ img, img:hover {
 }
 
 
-//footer
-.footer {
-    margin-top:120px;
-    padding:30px;
-    border-top:1px solid $grey;
-    font-size:15px;
-    background: $white;
-}
 
-//responsive tweaks
+
+
+// TABLET BREAKPOINT
 @media (min-width: 768px) {
-    .container, .container-sm, .container-md, .container-lg {
+    .container {
         max-width: 80%;
     }
-}
-@media (min-width: 1440px) {
-    .container, .container-sm, .container-md, .container-lg {
-        max-width: 1140px;
+    .navbar {
+        justify-content: flex-end;
+        padding: 16px;
+        input, label {
+            display: none;
+        }
+    }
+    .menu {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        max-height: initial;
+        ul {
+            flex-direction: initial;
+            align-items: initial;
+            padding: initial;
+            margin: 0;
+        }
+    }
+
+    .sitetag {
+        font-size: 3rem;
+    }
+
+    .page-title {
+        font-size: 2.25rem;
+    }
+
+    .article-post, .entry-header { 
+        padding-left:20px;
+        padding-right:20px;
+    }
+    .article-post {
+        font-size:1.125rem;
     }
 }
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 950px;
+    }
+}
+
 @media (max-width: 1024px) {
     .container {
         width: 90%;
-        max-width:90%;
-        padding-left:80px;
     }
     .works-grid-container {
         grid-template-columns: 1fr 1fr;
     }
 }
+
 @media (max-width: 768px) {
-    .post-title {
-        font-size:35px;
-    }
+
     .works-grid-container {
         grid-template-columns: 1fr;
     }
@@ -350,24 +362,3 @@ img, img:hover {
     }
 }
 
-@media (max-width: 600px) {
-    .container {
-        padding-left:15px;
-    }
-    .site-content {
-        padding-top:0;
-    }
-}
-@media (max-width: 480px) {
-    .article-post, .entry-header { 
-        padding-left:0;
-        padding-right:0;
-    }
-    blockquote {
-        margin-left:15px;
-        font-size:18px;
-    }
-    .article-post {
-        font-size:15px;
-    }
-}
