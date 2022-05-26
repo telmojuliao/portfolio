@@ -9,7 +9,9 @@ title: Home
 
 <h2>Latest works</h2>
 <div class="works-grid-container">
-    {% for work in site.works limit: 3 %}
+    <!--- criar lista revertida antes do loop -->
+    {% assign works = site.works | reverse %} 
+    {% for work in works limit: 3 %}
         {% include postbox.html %}
     {% endfor %}
 </div>

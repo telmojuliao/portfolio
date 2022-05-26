@@ -24,7 +24,7 @@ $purple: #6c16f8;
 $blue: #40ffdc;
 $black: #17262a;
 $darkgrey: #696969;
-$grey: #cfd2d6;
+$grey: #dbdee3;
 $white: #fff;
 $whitefaded: rgba(255,255,255,.95);
 $primary: $purple;
@@ -143,17 +143,37 @@ blockquote {
     padding-bottom: 32px;
 }
 
+@mixin imgShadow {
+    -webkit-box-shadow: 0px 45px 20px -41px rgba(0,0,0,0.11);
+    -moz-box-shadow: 0px 45px 20px -41px rgba(0,0,0,0.11);
+    box-shadow: 0px 45px 20px -41px rgba(0,0,0,0.11);
+}
+
+.page-image {  
+    @include imgShadow();
+    width: 940px;  
+    max-width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
 .page-content {
     h2 {
         padding-top: 40px;
     }
     img {
-        -webkit-box-shadow: 0px 45px 20px -41px rgba(0,0,0,0.11);
-        -moz-box-shadow: 0px 45px 20px -41px rgba(0,0,0,0.11);
-        box-shadow: 0px 45px 20px -41px rgba(0,0,0,0.11);
         border: solid 1px $grey;
     }
+    font-size: 1rem;
+    p, ul {
+        margin-top: 32px;
+    }
 }
+
+
 
 .row {
     input {
@@ -277,23 +297,8 @@ blockquote {
 }
 
 
-// PAGINAS / ARTIGOS
-.page-image {  
-    width: 940px;  
-    max-width: 100%;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 48px;
-    margin-bottom: 48px;
-}
+// PAGINAS
 
-.page-content {    
-    font-size: 1rem;
-    p, ul {
-        margin-top: 32px;
-    }
-}
 
 
 // TABLET BREAKPOINT

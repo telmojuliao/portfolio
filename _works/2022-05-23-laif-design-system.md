@@ -32,4 +32,4 @@ Cups can hold more blood than other methods, leading many women to use them as a
 ## Mockups
 ![alt text]({{ site.baseurl }}/assets/images/laif/mockups.png "Final mockups of the project")
 
-<a target="_blank" href="http://localhost:4000/work/2022-05-23-laif-design-system" class="btn btn-dark">Check full case on Behance &rarr;</a>
+<a target="_blank" href="https://www.behance.net/gallery/141193571/LAIF-Design-System" class="btn btn-dark">Check full case on Behance &rarr;</a>
