@@ -24,7 +24,7 @@ $purple: #6c16f8;
 $blue: #40ffdc;
 $black: #17262a;
 $darkgrey: #696969;
-$grey: #e9ecef;
+$grey: #cfd2d6;
 $white: #fff;
 $primary: $purple;
 $secondary: $blue;
@@ -149,6 +149,7 @@ blockquote {
         -webkit-box-shadow: 0px 45px 20px -41px rgba(0,0,0,0.11);
         -moz-box-shadow: 0px 45px 20px -41px rgba(0,0,0,0.11);
         box-shadow: 0px 45px 20px -41px rgba(0,0,0,0.11);
+        border: solid 1px $grey;
     }
 }
 
@@ -340,24 +341,37 @@ blockquote {
         grid-template-columns: 1fr 1fr;
     }
 
+    .works-grid-item {
+        .img-thumb {
+            height:240px;
+        }
+    }
+
     .firstpage {
         .works-grid-item:nth-child(1) {
             grid-column-start: 1;
             grid-column-end: 3;
             grid-row-start: 1;
             grid-row-end: 3;
+            .img-thumb {
+                height: 400px;
+            }
             .card-title {
                 font-size: 1.75rem;
             }
-
         }
         .works-grid-item:nth-child(n+2) {
+            .img-thumb {
+                height: 160px;
+            }
             .card-text {
                 display: none;
             } 
         }
+        
     }
 }
+
 
 // DESKTOP BREAKPOINT
 @media (min-width: 1024px) {
