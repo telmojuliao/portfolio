@@ -11,7 +11,7 @@ For this postgraduate course project, we were asked to rethink and redesign the 
 ## The design process
 To better align the team towards a common goal we used the Double Diamond process which led to better communication and efficient iterative phases.
 
-![alt text]({{ site.baseurl }}/assets/images/fbaul/process.png "The design process")
+![Diagram of the design process]({{ site.baseurl }}/assets/images/fbaul/process.png "The design process")
 
 
 ## Primary research
@@ -31,9 +31,9 @@ From that survey we talked to a few people in informal **interviews** to get a m
 * inspiration and professional update
 
 ## Information Architecture
-![alt text]({{ site.baseurl }}/assets/images/fbaul/ia.png "Information architecture diagram for the new site")
+![Information architecture diagram for the new site]({{ site.baseurl }}/assets/images/fbaul/ia.png "Information architecture diagram")
 
 ## Design kit
-![alt text]({{ site.baseurl }}/assets/images/fbaul/designkit.png "Design kit")
+![Logo, colors and typography used in the project]({{ site.baseurl }}/assets/images/fbaul/designkit.png "Design kit")
 
 <a target="_blank" href="https://www.behance.net/gallery/139852657/FBAUL-Alumni-Website-UX-UI-Case" class="btn btn-dark">Check full case on Behance &rarr;</a>

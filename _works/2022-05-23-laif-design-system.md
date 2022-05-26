@@ -9,7 +9,7 @@ The purpose of this project was to select a physical product and design an onlin
 The main challenge was to build a Design System that should meet several constraints, limiting the choices for colors, typography and also components.
 
 ## The design process
-![alt text]({{ site.baseurl }}/assets/images/laif/process.png "The design process")
+![Diagram with the design process phases]({{ site.baseurl }}/assets/images/laif/process.png "The design process")
 
 ## Product research
 For this project I wanted to work in a product that in a way matches some of my values: **feminism and climate change**.
@@ -24,12 +24,12 @@ The chosen product was the Menstrual Cup. A small cup made of rubber or silicone
 Cups can hold more blood than other methods, leading many women to use them as an eco-friendly alternative to tampons. It’s also easy to distribute being an interesting option to fight social inequality.
 
 ## Colors
-![alt text]({{ site.baseurl }}/assets/images/laif/colors.png "Project colors")
+![List of colors used in the site]({{ site.baseurl }}/assets/images/laif/colors.png "Project colors")
 
 ## Buttons and components
-![alt text]({{ site.baseurl }}/assets/images/laif/buttons.png "Buttons with various states")
+![Buttons designed for the website with different states]({{ site.baseurl }}/assets/images/laif/buttons.png "Buttons of the Design System")
 
 ## Mockups
-![alt text]({{ site.baseurl }}/assets/images/laif/mockups.png "Final mockups of the project")
+![4 different final mockups of the project]({{ site.baseurl }}/assets/images/laif/mockups.png "Final mockups of the project")
 
 <a target="_blank" href="https://www.behance.net/gallery/141193571/LAIF-Design-System" class="btn btn-dark">Check full case on Behance &rarr;</a>
