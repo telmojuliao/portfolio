@@ -1,11 +1,11 @@
 - title: Home
-  link: site.baseurl
+  link: /
 
 - title: Work
-  link: site.baseurl/work/
+  link: work/
 
 - title: About
-  link: /about/
+  link: about/
 
 - title: Contact
-  link: /contact/
+  link: contact/
