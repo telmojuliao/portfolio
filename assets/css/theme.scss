@@ -54,6 +54,10 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: 700;
 }
 
+hr {
+    margin: 40px 0 64px 0;
+}
+
 
 // NAVEGAÇÃO
 .navbar {
@@ -90,6 +94,9 @@ h1,h2,h3,h4,h5,h6 {
         align-items: center;
         padding: 24px;
         gap: 24px;
+        .active {
+            font-weight: 700;
+        }
     }
 }
 
@@ -123,6 +130,19 @@ h1,h2,h3,h4,h5,h6 {
     display: none;
 }
 
+blockquote {
+    font-family: Times New Roman;
+    font-style: italic;
+    font-size: 1rem;
+    position:relative;
+    border-left:1px solid $dark;
+    margin-left:16px;
+    padding-left:16px;
+    cite {
+        font-weight:700;
+    }
+}
+
 
 //FOOTER
 .footer {
@@ -132,7 +152,10 @@ h1,h2,h3,h4,h5,h6 {
     font-size:15px;
     background: $white;
     button {
-        border: none;
+        border: dashed 1px $primary;
+        border-radius: 50%;
+        padding: 0 8px;
+        color: $primary;
         cursor: pointer;
         font-size: 16px;
         background-color: $white;
@@ -255,30 +278,21 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 
-// portfolio work 
-.article-post, .entry-header {
-    // padding-left: 20px;
-    // padding-right: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
 .entry-featured-image {  
-    width:940px;  
+    width: 940px;  
     max-width: 100%;
     text-align:center;
     margin-left:auto;
     margin-right: auto;
-    margin-top:50px;
-    margin-bottom:50px;
+    margin-top: 48px;
+    margin-bottom: 48px;
 }
 
 .article-post {    
     font-size:1rem;
-    p {
-        margin-top:30px;
-        margin-bottom:30px;
+    p, ul {
+        margin-top:32px;
+        margin-bottom:32px;
     }
 }
 
@@ -312,17 +326,18 @@ h1,h2,h3,h4,h5,h6 {
     }
 
     .sitetag {
-        font-size: 3rem;
+        font-size: 3.25rem;
     }
 
     .page-title {
         font-size: 2.25rem;
     }
 
-    .article-post, .entry-header { 
-        padding-left:20px;
-        padding-right:20px;
+    blockquote {
+        font-size: 1.5rem;
+        margin-left:32px;
     }
+
     .article-post {
         font-size:1.125rem;
     }

@@ -22,7 +22,7 @@
         <div class="menu">
             <ul class="menu-links">
                 {% for item in site.data.menu %}
-                <li><a href="{{ item.link }}">{{ item.title }}</a></li>
+                <li><a href="{{ item.link }}" class="{% if page.url == item.link %}active{% endif %}">{{ item.title }}</a></li>
                 {% endfor %}
             </ul>
         </div>
@@ -50,7 +50,7 @@
                 Copyright © {{ site.time | date: "%Y" }} {{ site.name }} 
             </div>
             <div class="col-md text-right">    
-                <button id="scrollToTopBtn" name="Scroll to top" aria-label="Scroll to top">☝️</button>
+                <button id="scrollToTopBtn" name="Scroll to top" aria-label="Scroll to top">&uparrow;</button>
             </div>
         </div>
     </div>
