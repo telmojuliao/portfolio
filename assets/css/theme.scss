@@ -26,6 +26,7 @@ $black: #17262a;
 $darkgrey: #696969;
 $grey: #cfd2d6;
 $white: #fff;
+$whitefaded: rgba(255,255,255,.95);
 $primary: $purple;
 $secondary: $blue;
 $dark: $black;
@@ -79,7 +80,8 @@ blockquote {
 
 // NAVEGAÇÃO
 .navbar {
-    background-color: $white;
+    background-color: $whitefaded;
+    backdrop-filter: blur(2px);
     a {
         text-decoration: none;
     }
