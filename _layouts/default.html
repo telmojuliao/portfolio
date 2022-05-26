@@ -15,46 +15,13 @@
 
 <body>
 <!-- NAVEGAÇÃO -->
-<nav class="navbar">
-    <div class="container">
-        <input type="checkbox" id="toggle" autocomplete="off" name="Menu toggle" aria-label="Open menu" value="Open">
-        <label for="toggle"><i class="fa-solid fa-bars menu-open"></i></label>
-        <div class="menu">
-            <ul class="menu-links">
-                {% for item in site.data.menu %}
-                <li><a href="{{ item.link }}" class="{% if page.url == item.link %}active{% endif %}">{{ item.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </div>
-    </div>
-</nav>
+{% include menu.html %}
 
 <!-- MAIN -->
-<main class="{% if page.title == 'Home' %}firstpage{% endif %}">
-    <div class="container">
-        <a class="tj-logo" href="{{ site.baseurl }}/">
-            <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">
-        </a> 
-        <h1 class="page-title{% if page.title == 'Home' %} home-title{% endif %}">{{ page.title }}</h1>
-        <div class="main-content">
-            {{ content }}
-        </div>
-    </div>
-</main>
+{% include main.html %}
 
 <!-- FOOTER -->
-<footer class="footer">
-    <div class="container">
-        <div class="row">
-            <div class="col-md text-left">
-                Copyright © {{ site.time | date: "%Y" }} {{ site.name }} 
-            </div>
-            <div class="col-md text-right">    
-                <button id="scrollToTopBtn" name="Scroll to top" aria-label="Scroll to top">&uparrow;</button>
-            </div>
-        </div>
-    </div>
-</footer>
+{% include footer.html %}
 
 <!-- OUTROS SCRIPTS -->
 <script src="{{ site.baseurl }}/assets/js/stuff.js"></script> 

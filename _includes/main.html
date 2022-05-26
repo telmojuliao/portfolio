@@ -1,0 +1,11 @@
+<main class="{% if page.title == 'Home' %}firstpage{% endif %}">
+    <div class="container">
+        <a class="tj-logo" href="{{ site.baseurl }}/">
+            <img src="{{ site.baseurl }}/{{ site.logo }}" alt="{{ site.name }}">
+        </a> 
+        <h1 class="page-title{% if page.title == 'Home' %} home-title{% endif %}">{{ page.title }}</h1>
+        <div class="main-content">
+            {{ content }}
+        </div>
+    </div>
+</main>
