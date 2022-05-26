@@ -12,21 +12,23 @@ html {
 }
 
 
- // CORES
-$blue: #40ffdc;
-$purple: #6c16f8;
-$black: #17262a;
-$grey: #e9ecef;
-$white: #fff;
-$primary: $purple;
-$dark:    $black;
-
-
 // IMPORTAR BOOTSTRAP
 @import 'bootstrap/bootstrap';
 @import "bootstrap/functions";
 @import 'bootstrap/variables';
 @import "bootstrap/mixins";
+
+
+ // CORES
+$purple: #6c16f8;
+$blue: #40ffdc;
+$black: #17262a;
+$darkgrey: #888;
+$grey: #e9ecef;
+$white: #fff;
+$primary: $purple;
+$secondary: $blue;
+$dark: $black;
 
 
 // MAIN ELEMENTS
@@ -39,6 +41,7 @@ button {
 body {
     line-height: 1.7;
     background: #f4f4f4;
+    overscroll-behavior-y: none; // fix bug do chrome faz scroll após limite da página
 }
 
 a {
@@ -114,7 +117,7 @@ hr {
     font-size: 2.25rem;
     line-height: 1.3;
     font-weight: 400;   
-    padding-bottom: 3rem;
+    padding-bottom: 48px;
 }
 
 .btn {
@@ -134,37 +137,37 @@ blockquote {
     font-family: Times New Roman;
     font-style: italic;
     font-size: 1rem;
-    position:relative;
-    border-left:1px solid $dark;
-    margin-left:16px;
-    padding-left:16px;
+    border-left: 1px solid $dark;
+    margin-left: 16px;
+    padding-left: 16px;
     cite {
-        font-weight:700;
+        font-weight: 700;
     }
 }
 
 
 //FOOTER
 .footer {
-    margin-top:120px;
-    padding:30px;
-    border-top:1px solid $grey;
-    font-size:15px;
+    margin-top: 120px;
+    padding: 30px;
+    border-top: 1px solid $grey;
+    font-size: .875rem;
     background: $white;
+    color: $darkgrey;
     button {
         border: dashed 1px $primary;
-        border-radius: 50%;
+        border-radius: 4px;
         padding: 0 8px;
-        color: $primary;
         cursor: pointer;
         font-size: 16px;
+        color: $primary;
         background-color: $white;
     }
 }
 
 
 // ANIMAÇÕES GERAIS
-@keyframes fade-up {
+@keyframes fadeup {
 	0% {
 		opacity: 0;
 		transform: translateY(20%);
@@ -175,86 +178,53 @@ blockquote {
 	}
 }
 
-.article-post,
+.page-content,
 .works-grid-item,
-.entry-featured-image {
-    animation: fade-up .8s ease-out;
+.page-image {
+    animation: fadeup .8s ease-out;
 }
 
 
 // GRID PARA WORKS
-
-// Container Geral
+// -- Container Geral
 .works-grid-container {
     width: auto;
     margin: 32px auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-gap: 32px;
 }
 
-// Layout para Homepage
-.firstpage {
-    .works-grid-item:nth-child(1) {
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 3;
-        flex-direction: column;  
-        font-size: 1rem;
-        padding:0;
-        .card-title {
-            font-size:1.75rem;
-        }
-        .img-thumb {
-            object-fit:cover;
-            height:400px;
-            width:100%;
-            object-position:top;
-        }
-    }
-
-    .works-grid-item:nth-child(2), .works-grid-item:nth-child(3) {
-        .card-text {
-            display:none;
-        }
-        .img-thumb {
-            object-fit:cover;
-            height:160px;
-            width:100%;
-            object-position:top;
-        }
-        .card-title {
-            font-size:18px;
-            line-height:1.5;
-        }      
-    }
-}
-
-
-// Single work (Cards do Bootstrap)
+// -- Work Item (cards do bootstrap)
 .works-grid-item {  
-    color: #333;
-    padding: 0;
+    color: $darkgrey;
     display: flex;
     align-items: center;
     .card {
         border:0;
         &:hover {           
            .card-title a { 
-                background-size: 100% 100%;
+                background-size: 100% 100%; // underline aberto
             }
         }
     }
+
+    .img-thumb {
+        object-fit:cover;
+        object-position:top;
+        width:100%;
+        height: auto;
+    }
+
     .card-title {
-        font-weight:700;
-        font-size:22px;
-        line-height:1.4;
+        font-weight: 700;
+        font-size: 1.125rem;
+        line-height: 1.4;
         a { 
             background-image: linear-gradient(180deg, transparent 89%, $primary 0);
             background-repeat: no-repeat;
-            background-size: 0 100%;
+            background-size: 0 100%; // underline fechado
             transition: background-size .8s ease;
             position:relative;
             &:hover {
@@ -262,49 +232,42 @@ blockquote {
             }
         }
     }
-    .card-text {
-        font-weight:400;
-        font-size:16px;
-        line-height:1.8;
-        margin-top:15px;
-    }
 
-    .img-thumb {
-        object-fit:cover;
-        height:240px;
-        width:100%;
-        object-position:top;
+    .card-text {
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 1.8;
+        margin-top: 16px;
     }
 }
 
 
-.entry-featured-image {  
+// PAGINAS / ARTIGOS
+.page-image {  
     width: 940px;  
     max-width: 100%;
-    text-align:center;
-    margin-left:auto;
+    text-align: center;
+    margin-left: auto;
     margin-right: auto;
     margin-top: 48px;
     margin-bottom: 48px;
 }
 
-.article-post {    
-    font-size:1rem;
+.page-content {    
+    font-size: 1rem;
     p, ul {
-        margin-top:32px;
-        margin-bottom:32px;
+        margin-top: 32px;
+        margin-bottom: 32px;
     }
 }
-
-
-
 
 
 // TABLET BREAKPOINT
 @media (min-width: 768px) {
     .container {
-        max-width: 80%;
+        max-width: 90%;
     }
+
     .navbar {
         justify-content: flex-end;
         padding: 16px;
@@ -312,11 +275,11 @@ blockquote {
             display: none;
         }
     }
+
     .menu {
-        width: 100%;
         display: flex;
         justify-content: flex-end;
-        max-height: initial;
+        max-height: 100%;
         ul {
             flex-direction: initial;
             align-items: initial;
@@ -335,45 +298,43 @@ blockquote {
 
     blockquote {
         font-size: 1.5rem;
-        margin-left:32px;
+        margin-left: 32px;
     }
 
-    .article-post {
-        font-size:1.125rem;
+    .page-content {
+        font-size: 1.125rem;
     }
-}
 
-@media (min-width: 1200px) {
-    .container {
-        max-width: 950px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .container {
-        width: 90%;
-    }
     .works-grid-container {
         grid-template-columns: 1fr 1fr;
     }
+
+    .firstpage {
+        .works-grid-item:nth-child(1) {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+            .card-title {
+                font-size: 1.75rem;
+            }
+
+        }
+        .works-grid-item:nth-child(n+2) {
+            .card-text {
+                display: none;
+            } 
+        }
+    }
 }
 
-@media (max-width: 768px) {
+// DESKTOP BREAKPOINT
+@media (min-width: 1024px) {
+    .container {
+        max-width: 950px;
+    }
 
     .works-grid-container {
-        grid-template-columns: 1fr;
-    }
-    .firstpage .works-grid-item:nth-child(1) {
-        grid-column-start: 1;
-        grid-column-end: 2;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-    .works-grid-item .img-thumb, 
-    .firstpage .works-grid-item:nth-child(1) .img-thumb, 
-    .firstpage .works-grid-item:nth-child(2) .img-thumb, 
-    .firstpage .works-grid-item:nth-child(3) .img-thumb {
-        height:auto;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
-

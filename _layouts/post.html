@@ -2,11 +2,8 @@
 layout: default
 ---
 
-{% if page.image %}
-<div class="entry-featured-image">
-    <img class="featured-image" src="{{ site.baseurl }}/{{ page.image }}" alt="{{ page.title }}">
-</div>
-{% endif %}
+<!-- Imagem -->
+{% include image.html %}
 
-
-{% include article.html %}
+<!-- Texto -->
+{% include text.html %}
