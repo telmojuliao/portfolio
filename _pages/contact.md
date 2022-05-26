@@ -9,16 +9,16 @@ Want to get in touch? **Send me a message.**
 <form action="https://formspree.io/f/mrgjjqrq" method="POST">    
     <div class="row">
         <div class="col-md">
-        <label class="col-form-label">Name</label>
-        <input class="form-control" type="text" name="name" placeholder="Enter your name" required>
+        <label class="col-form-label" for="name">Name</label>
+        <input class="form-control" type="text" id="name" name="name" placeholder="Enter your name" required>
         </div>
         <div class="col-md">
-        <label class="col-form-label">E-Mail</label>
-        <input class="form-control" type="email" name="_replyto" placeholder="Enter your e-mail" required>
+        <label class="col-form-label" for="email">E-Mail</label>
+        <input class="form-control" type="email" id="email" name="_replyto" placeholder="Enter your e-mail" required>
         </div>
     </div>
-    <label class="col-form-label">Message</label>
-    <textarea rows="8" class="form-control" name="message" placeholder="Write your message" required></textarea>    
+    <label class="col-form-label" for="message">Message</label>
+    <textarea rows="8" class="form-control" id="message" name="message" placeholder="Write your message" required></textarea>    
     <button class="btn btn-dark" type="submit" value="Send">Send</button>
 </form>
 
