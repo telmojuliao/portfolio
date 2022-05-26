@@ -1,8 +1,8 @@
 - title: Home
-  link: /
+  link: site.baseurl
 
 - title: Work
-  link: /work/
+  link: site.baseurl/work/
 
 - title: About
   link: /about/
