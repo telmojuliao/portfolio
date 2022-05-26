@@ -2,14 +2,13 @@
 layout: page
 title: About 
 permalink: /about/
-image: assets/images/sample.jpg
 ---
 
 ## Who am I?
 
-I’m a Product Designer based in beautiful and sunny Lisbon, Portugal.
+I’m a digital Product Designer based in beautiful and sunny Lisbon, Portugal.
 
-My focus is on designing unique digital experiences from end-to-end, delivering easy to use products that solve problems and help people’s lives. I apply a user-centric process with a keen eye for detail, building empathy with the user while keeping a business oriented perspective.
+My focus is on **designing unique digital experiences** from end-to-end, delivering easy to use products that solve problems and help people’s lives. I apply a **user-centric process** with a keen eye for detail, building empathy with the user while keeping a business oriented perspective.
 
 I’m currently finishing my Digital Experience Design postgraduate course at FBAUL, while consolidating knowledge in UX & UI Design.
 

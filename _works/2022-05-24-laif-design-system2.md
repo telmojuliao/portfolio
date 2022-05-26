@@ -1,6 +1,6 @@
 ---
-layout: post
-title:  "LAIF Design System 2, a small system for a big cause"
+layout: page
+title:  "LAIF Design Systemaaa 2, a small system for a big cause"
 image: assets/images/sample.jpg
 ---
 

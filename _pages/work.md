@@ -5,7 +5,7 @@ permalink: /work/
 ---
 
 <div class="works-grid-container">
-    {% for post in site.works %}
+    {% for work in site.works %}
         {% include postbox.html %}
     {% endfor %}
 </div>

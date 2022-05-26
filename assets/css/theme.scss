@@ -23,7 +23,7 @@ html {
 $purple: #6c16f8;
 $blue: #40ffdc;
 $black: #17262a;
-$darkgrey: #888;
+$darkgrey: #696969;
 $grey: #e9ecef;
 $white: #fff;
 $primary: $purple;
@@ -31,7 +31,7 @@ $secondary: $blue;
 $dark: $black;
 
 
-// MAIN ELEMENTS
+// MAIN GENERIC ELEMENTS
 body,
 input,
 button {   
@@ -45,7 +45,10 @@ body {
 }
 
 a {
-    color: lighten($primary, 10%);
+    color: $primary;
+    &:hover {
+        color: lighten($primary, 20%);
+    }
 }
 
 img {
@@ -59,6 +62,18 @@ h1,h2,h3,h4,h5,h6 {
 
 hr {
     margin: 40px 0 64px 0;
+}
+
+blockquote {
+    font-family: Times New Roman;
+    font-style: italic;
+    font-size: 1rem;
+    border-left: 1px solid $dark;
+    margin-left: 16px;
+    padding-left: 16px;
+    cite {
+        font-weight: 700;
+    }
 }
 
 
@@ -104,7 +119,7 @@ hr {
 }
 
 
-// MAIN ELEMENTS
+// COMMON ELEMENTS
 .tj-logo {
     display: inline-block;
     padding: 40px 0;
@@ -120,31 +135,48 @@ hr {
     padding-bottom: 48px;
 }
 
-.btn {
-    min-width: 180px;
-}
-
 .page-title {
     text-align: center;
     font-size: 2rem;
+    padding-bottom: 32px;
 }
 
-.home-title {
-    display: none;
-}
-
-blockquote {
-    font-family: Times New Roman;
-    font-style: italic;
-    font-size: 1rem;
-    border-left: 1px solid $dark;
-    margin-left: 16px;
-    padding-left: 16px;
-    cite {
-        font-weight: 700;
+.page-content {
+    h2 {
+        padding-top: 40px;
+    }
+    img {
+        -webkit-box-shadow: 0px 45px 20px -41px rgba(0,0,0,0.11);
+        -moz-box-shadow: 0px 45px 20px -41px rgba(0,0,0,0.11);
+        box-shadow: 0px 45px 20px -41px rgba(0,0,0,0.11);
     }
 }
 
+.row {
+    input {
+        margin-bottom: 16px;
+    }
+}
+
+.btn {
+    min-width: 180px;
+    margin: 16px 0;
+}
+
+.hidden {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.socials {
+    font-size: 1.25rem;
+    a {
+        padding: 4px;
+    }
+}
 
 //FOOTER
 .footer {
@@ -257,7 +289,6 @@ blockquote {
     font-size: 1rem;
     p, ul {
         margin-top: 32px;
-        margin-bottom: 32px;
     }
 }
 

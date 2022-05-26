@@ -4,12 +4,12 @@ title: Home
 ---
 
 <p class="sitetag">
-    {{ site.description }}
+    {{ site.description | newline_to_br }}
 </p>
 
 <h2>Latest works</h2>
 <div class="works-grid-container">
-    {% for post in site.works limit: 3 %}
+    {% for work in site.works limit: 3 %}
         {% include postbox.html %}
     {% endfor %}
 </div>
